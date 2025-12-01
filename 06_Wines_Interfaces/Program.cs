@@ -1,4 +1,4 @@
-﻿using System.Xml.Linq;
+using System.Xml.Linq;
 using Seido.Utilities.SeedGenerator;
 
 namespace _05_Wines_Interfaces;
@@ -17,8 +17,6 @@ class Program
         for (int i = 0; i < 5; i++)
         {
             wineCellar.Wines.Add(new WineAsClass().Seed(rnd));
-            wineCellar.Wines.Add(new WineAsStruct().Seed(rnd));
-            wineCellar.Wines.Add(new WineAsRecord().Seed(rnd));
         }
         #endregion
 
