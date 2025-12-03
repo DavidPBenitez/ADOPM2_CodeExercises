@@ -18,7 +18,7 @@ class Program
         {
             wineCellar.Wines.Add(new WineAsClass().Seed(rnd));
             wineCellar.Wines.Add(new WineAsStruct().Seed(rnd));
-            wineCellar.Wines.Add(new WineAsRecord().Seed(rnd));
+            //wineCellar.Wines.Add(new WineAsRecord().Seed(rnd));
         }
         #endregion
 

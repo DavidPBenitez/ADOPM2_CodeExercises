@@ -6,12 +6,12 @@ namespace _05_Wines_Interfaces
 
     public class WineAsClass : IWine
     {
-        public string Name { get; init; }
+        public string Name { get; set; }
 
-        public Country Country { get; init; }
-        public WineType WineType { get; init; }
-        public GrapeType GrapeType { get; init; }
-        public decimal Price { get; init; }
+        public Country Country { get; set; }
+        public WineType WineType { get; set; }
+        public GrapeType GrapeType { get; set; }
+        public decimal Price { get; set; }
         public override string ToString()
             => $"Wine {Name} from {Country} is {WineType} and made from grapes {GrapeType}."
             + $" The price is {Price:N2} Sek. ({this.GetType().Name})";
@@ -33,12 +33,12 @@ namespace _05_Wines_Interfaces
     
     public struct WineAsStruct : IWine
     {
-        public string Name { get; init; }
+        public string Name { get; set; }
 
-        public Country Country { get; init; }
-        public WineType WineType { get; init; }
-        public GrapeType GrapeType { get; init; }
-        public decimal Price { get; init; }
+        public Country Country { get; set; }
+        public WineType WineType { get; set; }
+        public GrapeType GrapeType { get; set; }
+        public decimal Price { get; set; }
         public override string ToString()
             => $"Wine {Name} from {Country} is {WineType} and made from grapes {GrapeType}."
             + $" The price is {Price:N2} Sek. ({this.GetType().Name})";
@@ -58,7 +58,7 @@ namespace _05_Wines_Interfaces
     }
 
 
-    public record WineAsRecord(string Name, Country Country, WineType WineType, GrapeType GrapeType, decimal Price) : IWine
+/*    public record WineAsRecord(string Name, Country Country, WineType WineType, GrapeType GrapeType, decimal Price) : IWine
     {
         public WineAsRecord(): this("", Country.France, WineType.Red, GrapeType.Chardonay, 0M) { }
         public IWine Seed(SeedGenerator rnd)
@@ -72,7 +72,7 @@ namespace _05_Wines_Interfaces
                 );
             return wr;
         }
-    }
+    }*/
 
 }
 
